@@ -1,0 +1,30 @@
+.header {
+    padding: 97px 0;
+
+    &__wrap {
+        text-align: right;
+    }
+
+    .cabinet {
+        color: @green;
+        position: relative;
+        text-decoration: underline;
+        padding-left: 30px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            width: 16px;
+            height: 22px;
+            background-image: url('/img/icons/lock.png');
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 40px 0;
+    }
+}

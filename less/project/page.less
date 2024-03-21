@@ -1,74 +1,115 @@
 .page {
-    position: relative;
-    background-color: #151919;
-    min-height: 100vh;
-    display: block;
-    overflow: hidden;
-    
-    &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background-image: url('../img/logo-bg.png');
-        width: 1109px;
-        height: 1035px;
-        pointer-events: none;
-    }
+  position: relative;
+  background-color: #151919;
+  min-height: 100vh;
+  display: block;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url('../img/logo-bg.png');
+    width: 1109px;
+    height: 1035px;
+    pointer-events: none;
+  }
 }
 
 .content {
-    padding: 75px 0;
+  padding: 75px 0;
 
-    .text {
-        margin-top: 65px;
-        max-width: 665px;
-        padding-left: 20px;
+  .text {
+    margin-top: 65px;
+    margin-bottom: 35px;
+    max-width: 690px;
+    padding-left: 20px;
 
-        p {
-            font-size: 20px;
-            line-height: 2;
+    p {
+      font-size: 20px;
+      line-height: 2;
 
-            a {
-                color: @green;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .contacts {
-        font-size: 15px;
+      a {
         color: @green;
         text-decoration: underline;
-        display: inline-block;
-        margin-top: 21px;
+      }
     }
+  }
+
+  .partner {
+    padding-left: 20px;
+    margin-bottom: 84px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px 25px;
+
+      span {
+        font-size: 15px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 5px 8px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
+      border: 2px solid @white;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: @white;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .content {
-        padding: 40px 0 75px;
+  .content {
+    padding: 40px 0 75px;
 
-        .text {
-            padding-left: 0;
+    .text {
+      padding-left: 0;
 
-            p {
-                font-size: 18px;    
-            }
-        }         
+      p {
+        font-size: 18px;
+      }
     }
+
+    .partner {
+      padding-left: 0;
+      margin-bottom: 35px;
+    }
+
+    .icons {
+      padding-left: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .content {
-        .text {
-            margin-top: 40px;
+  .content {
+    .text {
+      margin-top: 40px;
 
-            p {
-                font-size: 15px;
-            }
-        }
+      p {
+        font-size: 15px;
+      }
     }
+  }
 }
